@@ -10,10 +10,11 @@ import java.io.IOException;
 @WebServlet("/CreateLocal")
 public class CreateLocalServlet extends HttpServlet {
 
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String carName = request.getParameter("localname");
+        String localname = request.getParameter("LOCAL");
 
         System.out.println(localname);
 
