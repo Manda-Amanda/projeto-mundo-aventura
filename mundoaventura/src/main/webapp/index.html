@@ -4,30 +4,31 @@
 
 <form action="/CreateLocal" method="post">
 
-    <label>Nome</label>
-    <input type="text" name="Local" id=""> </br>
+    <label>Nome do Local</label>
+    <input type="text" name="LOCAL" id="LOCAL"> </br>
 
     <label>Endereco</label>
-    <input type="text" name="endereco" id=""></br>
+    <input type="text" name="ENDERECO" id="ENDERECO"></br>
 
     <label>Complemento</label>
-    <input type="text" name="Complemento" id=""> </br>
+    <input type="text" name="COMPLEMENTO" id="COMPLEMENTO"> </br>
 
     <label>CEP</label>
-    <input type="text" name="CEP" id=""> </br>
+    <input type="number" name="CEP" id="CEP"> </br>
 
     <label>Cidade</label>
-    <input type="text" name="Cidade" id=""> </br>
+    <input type="text" name="CIDADE" id="CIDADE"> </br>
 
     <label>Bairro</label>
-    <input type="text" name="bairro" id=""> </br>
+    <input type="text" name="BAIRRO" id="BAIRRO"> </br>
 
     <label>Imagens</label>
-    <input type = "image" id=""></br>
+    <input type="file" name="IMAGE" id="IMAGE" accept="image/png, image/jpeg" /> </br>
 
+    <label>Descricao</label> </br>
+    <textarea id="CESCRICAO" name="DESCRICAO" rows="4" cols="50"></textarea>
 
-
-    <button type="submit">Register</button>
+    </br><button type="Cadastrar Local">Register</button>
 
 </form>
 
