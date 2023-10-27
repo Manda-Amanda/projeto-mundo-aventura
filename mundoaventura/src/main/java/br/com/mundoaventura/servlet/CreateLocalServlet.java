@@ -1,25 +1,44 @@
 package br.com.mundoaventura.servlet;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import br.com.mundoaventura.dao.LocalDAO;
+import br.com.mundoaventura.model.Local;
+
 import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.annotation.WebServlet;
 
 @WebServlet("/CreateLocal")
 public class CreateLocalServlet extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String localname = request.getParameter("LOCAL");
+        String localID = request.getParameter("id");
+        String localNome = request.getParameter("nome-local");
+        String endereco = request.getParameter("endereco");
+        String complemento = request.getParameter("complemento");
+        String cep = request.getParameter("cep");
+        String cidade = request.getParameter("cidade");
+        String bairro = request.getParameter("bairro");
 
-        System.out.println(localname);
+        Local local = new Local(localID,localNome,endereco,complemento,cep,cidade,bairro);
+        LocalDAO localDAO = new LocalDAO();
 
-        request.getRequestDispatcher("index.html").forward(request, response);
+        if (localID.isBlank()) {
 
+            localDAO.createLocal(local);
+
+        } else {
+
+            localDAO.updateLocal(local);
+        }
+
+        response.sendRedirect("/find-all-locals");
     }
-
 }
+
+
+
