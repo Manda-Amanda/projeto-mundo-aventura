@@ -1,0 +1,49 @@
+package br.com.mundoaventura.dao;
+
+import br.com.mundoaventura.config.ConnectionPoolConfig;
+import br.com.mundoaventura.model.User;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UserDao {
+    public boolean verifyCredentials(User user) {
+
+        String SQL = "SELECT * FROM USR WHERE USERNAME = ?";
+
+        try {
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, user.getUsername());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            System.out.println("success in select username ");
+
+            while (resultSet.next()) {
+                String password = resultSet.getString("password");
+
+                if (password.equals(user.getPassword())) {
+                    connection.close();
+                    return true;
+
+
+                }
+            }
+
+            connection.close();
+
+            return true;
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e.getMessage());
+
+            return false;
+
+
+        }
+    }
+}

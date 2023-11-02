@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.mundoaventura.config.ConnectionPoolConfig;
 import br.com.mundoaventura.model.Local;
 
 public class LocalDAO {
@@ -13,9 +14,9 @@ public class LocalDAO {
         String SQL = "INSERT INTO LOCAL(NomeLocal, Endereco, Complemento, Cep, Cidade, Bairro) VALUES(?,?,?,?,?,?)";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("sucesso na conexão da database");
+            Connection connection = ConnectionPoolConfig.getConnection();
+
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -44,9 +45,7 @@ public class LocalDAO {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("sucesso na conexão da database");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -89,9 +88,7 @@ public class LocalDAO {
         String SQL = "DELETE LOCAL WHERE ID = ?";
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("sucesso na conexão da database");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setString(1, localID);
