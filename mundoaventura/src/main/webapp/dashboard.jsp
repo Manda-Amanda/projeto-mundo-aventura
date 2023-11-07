@@ -7,6 +7,11 @@
 </head>
 <body>
   <div>
+    <c:if test="${sessionScope.loggedUser != null}">
+          <span>${sessionScope.loggedUser}</span>
+          <a href="/logout">Logout</a>
+     </c:if>
+
     <h1>Locals</h1>
 
 
@@ -29,12 +34,14 @@
             <td>${local.cidade}</td>
             <td>${local.bairro}</td>
             <td>
-                <form action="/delete-local" method="post">
-                <input type="hidden" ID="ID" name="ID" value="${local.ID}">
-                <button type="submit">Delete</button>
-                <span> | </span>
-                <a href="index.jsp?ID=${local.ID}&nomeLocal=${local.nomeLocal}">Update<a/>
-                </form>
+              <c:if test="${sessionScope.loggedUser != null}">
+                 <form action="/delete-local" method="post">
+                   <input type="hidden" ID="ID" name="ID" value="${local.ID}">
+                   <button type="submit">Delete</button>
+                   <span> | </span>
+                   <a href="index.jsp?ID=${local.ID}&nomeLocal=${local.nomeLocal}">Update<a/>
+                 </form>
+               </c:if>
             </td>
         </tr>
     </c:forEach>

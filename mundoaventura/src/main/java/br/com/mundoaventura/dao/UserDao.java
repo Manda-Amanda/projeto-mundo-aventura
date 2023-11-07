@@ -23,10 +23,11 @@ public class UserDao {
             System.out.println("success in select username ");
 
             while (resultSet.next()) {
+
                 String password = resultSet.getString("password");
 
                 if (password.equals(user.getPassword())) {
-                    connection.close();
+
                     return true;
 
 
@@ -35,7 +36,7 @@ public class UserDao {
 
             connection.close();
 
-            return true;
+            return false;
 
         } catch (Exception e) {
 
