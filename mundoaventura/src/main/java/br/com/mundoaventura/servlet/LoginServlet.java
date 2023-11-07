@@ -14,17 +14,21 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {super.doGet(req, resp);
-         System.out.println("estou aqui");
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("login.jsp").forward(req, resp);
-
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+  throws ServletException, IOException {
 
-        String username = req.getParameter("username");
+        String username = req.getParameter("userName");
         String password = req.getParameter("password");
+
+        System.out.println("Email Digitado: " + username);
+        System.out.println("Senha Digitada: " + password);
+
+        String messege = "credenciais invalidas";
 
         User user = new User(username, password);
 
@@ -38,9 +42,10 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            req.setAttribute("messege", "Invalid credentials");
+            req.setAttribute("messege", messege);
 
             req.getRequestDispatcher("Login.jsp").forward(req, resp);
+
         }
     }
 }
