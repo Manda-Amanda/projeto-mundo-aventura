@@ -61,8 +61,13 @@ public class LocalDAO {
                 String cep = resultSet.getString("CEP");
                 String cidade = resultSet.getString("CIDADE");
                 String bairro = resultSet.getString("BAIRRO");
+                double entrada = resultSet.getDouble("entrada");
+                boolean matutino = resultSet.getBoolean("matutino");
+                boolean diurno = resultSet.getBoolean("diurno");
+                boolean noturno = resultSet.getBoolean("noturno");
 
-                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro);
+
+                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro, entrada, matutino, diurno, noturno);
 
                 locals.add(local);
 

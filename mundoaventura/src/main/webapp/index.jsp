@@ -24,6 +24,17 @@
     <label>Bairro</label>
     <input type="text" name="bairro" id="bairro" value="${param.bairro}"> </br>
 
+    <h3>Períodos:</h3></br>
+
+    <label>Matutino</label>
+    <input type="checkbox" id="matutino" value ="{$param.matutino}"> </br>
+
+    <label>Diurno</label>
+    <input type="checkbox" id="diruno" value ="{$param.diurno}"> </br>
+
+    <label>Noturno</label>
+    <input type="checkbox" id="diruno" value ="{$param.diurno}"> </br>
+
     <label>Imagens</label>
     <input type="file" name="IMAGE" id="IMAGE" accept="image/png, image/jpeg" /> </br>
 
