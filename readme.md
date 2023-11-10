@@ -14,10 +14,10 @@
 
 ##My SQL:
 - Local: Table
-  -ID: Collum
-  -NOMELOCAL: Collum
-  -ENDERECO: Collum
-  -COMPLEMENTO: Collum
-  -CEP: Collum
-  -CIDADE: Collum
-  -BAIRRO: Collum
+-ID: Collum
+-NOMELOCAL: Collum
+-ENDERECO: Collum
+-COMPLEMENTO: Collum
+-CEP: Collum
+-CIDADE: Collum
+-BAIRRO: Collum
