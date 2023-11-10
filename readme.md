@@ -11,3 +11,13 @@
 - Galerias de Fotos: O site terá galerias de fotos para que os usuários possam ver fotos de lugares antes de visitá-los
 
 - Atualizações em Tempo Real: O site pode ser atualizado regularmente com eventos e informações em tempo real.
+
+##My SQL:
+- Local: Table
+  -ID: Collum
+  -NOMELOCAL: Collum
+  -ENDERECO: Collum
+  -COMPLEMENTO: Collum
+  -CEP: Collum
+  -CIDADE: Collum
+  -BAIRRO: Collum
