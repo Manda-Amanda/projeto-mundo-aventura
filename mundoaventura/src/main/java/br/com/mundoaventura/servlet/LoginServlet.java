@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
@@ -38,7 +39,7 @@ public class LoginServlet extends HttpServlet {
 
             req.getSession().setAttribute("loggedUser", username);
 
-            resp.sendRedirect("find-all-locals");
+            resp.sendRedirect("index.jsp");
 
         } else {
 
