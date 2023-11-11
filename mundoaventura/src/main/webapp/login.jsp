@@ -41,7 +41,7 @@
                                     <label class="form-label">Senha</label>
                                 </div>
                                 <p><a href="#">Esqueceu a senha ?</a></p>
-                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                <button type="submit" class="btn btn-success btn-block mb-4">
                                     Login
                                 </button>
                             </form>
