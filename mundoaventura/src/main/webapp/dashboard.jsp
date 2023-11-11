@@ -23,6 +23,7 @@
         <th>Cep</th>
         <th>Cidade</th>
         <th>Bairro</th>
+        <th>Comentário</th>
     </tr>
 
     <c:forEach var="local" items="${locals}">
@@ -42,6 +43,13 @@
                    <a href="index.jsp?ID=${local.ID}&nomeLocal=${local.nomeLocal}">Update<a/>
                  </form>
                </c:if>
+            </td>
+            <td>
+                <form action="/CreateComentario" method="post">
+                <input type="hidden"  name="local_id" value="${local.ID}">
+                <input type="text" name="comentario">
+                <button type="submit">adicionar</button>
+               </form>
             </td>
         </tr>
     </c:forEach>
