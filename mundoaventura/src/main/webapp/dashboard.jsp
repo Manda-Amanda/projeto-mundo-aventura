@@ -23,7 +23,7 @@
         <th>Cep</th>
         <th>Cidade</th>
         <th>Bairro</th>
-        <th>Comentário</th>
+        <th>Comentario</th>
     </tr>
 
     <c:forEach var="local" items="${locals}">
