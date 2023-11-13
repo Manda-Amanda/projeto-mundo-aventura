@@ -11,3 +11,5 @@
 - Galerias de Fotos: O site terá galerias de fotos para que os usuários possam ver fotos de lugares antes de visitá-los
 
 - Atualizações em Tempo Real: O site pode ser atualizado regularmente com eventos e informações em tempo real.
+
+![Git logo](projeto/Diagrama/diagrama-1.png)
