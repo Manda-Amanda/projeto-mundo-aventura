@@ -4,13 +4,13 @@ public class Local {
 
 
 
-    private String bairro;
-    private String cidade;
-    private String cep;
-    private String complemento;
-    private String endereco;
-    private String nomelocal;
-    private String id;
+    private final String bairro;
+    private final String cidade;
+    private final String cep;
+    private final String complemento;
+    private final String endereco;
+    private final String nomelocal;
+    private final String id;
 
     public Local(String id, String nomelocal, String endereco, String complemento, String cep, String cidade, String bairro) {
         this.id = id;
