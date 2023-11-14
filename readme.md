@@ -14,6 +14,9 @@
 
 <<<<<<< HEAD
 ![Git logo](projeto/Diagrama/diagrama-1.png)
+![Git logo](projeto/Diagrama/diagrama-2.png)
+![Git logo](projeto/Diagrama/diagrama-3.png)
+![Git logo](projeto/Diagrama/MicrosoftTeams-image.png)
 =======
 ##My SQL:
 - Local: Table
