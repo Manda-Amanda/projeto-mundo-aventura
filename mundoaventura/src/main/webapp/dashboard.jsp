@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="pt-br">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
@@ -75,7 +76,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="/admin/index.jsp"><span data-feather="file-text" class="align-text-bottom"></span>Novo Local</a>
+                        <a class="nav-link" href="index.jsp"><span data-feather="file-text" class="align-text-bottom"></span>Novo Local</a>
 
                     </li>
 
@@ -124,6 +125,7 @@
                                     <form action="/delete-local" method="post">
 
                                         <input type="hidden" ID="ID" name="ID" value="${local.ID}">
+
                                         <button class="btn btn-danger" type="submit">Delete</button>
 
                                         <a class="btn btn-secondary"
@@ -134,14 +136,13 @@
                                 </c:if>
                             </td>
 
-                            <td>
-                                <!--------- FORMULARIO 2 --------->
+                             <td>
                                 <form class="d-flex gap-2 ms-2" action="/CreateComentario" method="post">
                                     <input type="hidden" name="local_id" value="${local.ID}">
                                     <input class="form-control" type="text" name="comentario">
                                     <button class="btn btn-success" type="submit">Adicionar</button>
                                 </form>
-                            </td>
+                             </td>
                         </tr>
 
                     </c:forEach>
@@ -167,4 +168,5 @@
 <script src="../js/dashboard.js"></script>
 
 </body>
+
 </html>

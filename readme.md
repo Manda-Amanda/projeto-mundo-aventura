@@ -12,6 +12,12 @@
 
 - Atualizações em Tempo Real: O site pode ser atualizado regularmente com eventos e informações em tempo real.
 
+<<<<<<< HEAD
+![Git logo](projeto/Diagrama/diagrama-1.png)
+![Git logo](projeto/Diagrama/diagrama-2.png)
+![Git logo](projeto/Diagrama/diagrama-3.png)
+![Git logo](projeto/Diagrama/MicrosoftTeams-image.png)
+=======
 ##My SQL:
 - Local: Table
 -ID: Collum
@@ -23,3 +29,4 @@
 -BAIRRO: Collum
 
 ![TEXTO ALT...].(/Diagrama/diagrama-1.png).
+>>>>>>> 50e22c2f95e47a556bcf20b74efca8d91d45f8e2

@@ -2,6 +2,8 @@ package br.com.mundoaventura.model;
 
 public class Local {
 
+
+
     private String bairro;
     private String cidade;
     private String cep;
@@ -18,6 +20,7 @@ public class Local {
         this.cep = cep;
         this.cidade = cidade;
         this.bairro = bairro;
+
     }
 
     public String getNomeLocal() {return nomelocal;}
