@@ -112,7 +112,7 @@
 
             <div class="mt-3 col-0">
                 <label class="form-label ms-2" for="IMAGE">Imagens</label>
-                <input class="form-control" type="file" name="IMAGE" id="IMAGE" accept="image/png, image/jpeg" />
+                <input class="form-control" type="text" name="IMAGE" id="IMAGE" value = "${param.imagem}" />
             </div>
 
             <div class="mt-3 col-0 form-floating">

@@ -23,6 +23,7 @@ public class CreateLocalServlet extends HttpServlet {
         String cep = request.getParameter("cep");
         String cidade = request.getParameter("cidade");
         String bairro = request.getParameter("bairro");
+        String imagem = request.getParameter("imagem");
         double entrada = Double.parseDouble(request.getParameter("entrada"));
         double meia = Double.parseDouble(request.getParameter("meia"));
         boolean matutino = Boolean.parseBoolean(request.getParameter("matutino"));
@@ -30,7 +31,7 @@ public class CreateLocalServlet extends HttpServlet {
         boolean noturno = Boolean.parseBoolean(request.getParameter("noturno"));
 
 
-        Local local = new Local(localID,localNome,endereco,complemento,cep,cidade,bairro, entrada,meia, matutino, diurno, noturno);
+        Local local = new Local(localID,localNome,endereco,complemento,cep,cidade,bairro, entrada,meia, matutino, diurno, noturno, imagem);
         LocalDAO localDAO = new LocalDAO();
 
         if (localID.isBlank()) {
