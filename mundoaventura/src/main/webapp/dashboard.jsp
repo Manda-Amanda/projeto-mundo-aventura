@@ -52,7 +52,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" aria-current="page" href="#"><span data-feather="user" class="align-text-bottom"></span> Home</a>
+                        <a class="nav-link" aria-current="page" href="dashboard.jsp"><span data-feather="user" class="align-text-bottom"></span> Home</a>
 
                         <c:if test="${sessionScope.loggedUser != null}">
 
@@ -70,7 +70,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" aria-current="page" href="/admin/dashboard.jsp"><span data-feather="home" class="align-text-bottom"></span> Home</a>
+                        <a class="nav-link" aria-current="page" href="dashboard.jsp"><span data-feather="home" class="align-text-bottom"></span> Home</a>
 
                     </li>
 
@@ -136,13 +136,6 @@
                                 </c:if>
                             </td>
 
-                             <td>
-                                <form class="d-flex gap-2 ms-2" action="/CreateComentario" method="post">
-                                    <input type="hidden" name="local_id" value="${local.ID}">
-                                    <input class="form-control" type="text" name="comentario">
-                                    <button class="btn btn-success" type="submit">Adicionar</button>
-                                </form>
-                             </td>
                         </tr>
 
                     </c:forEach>
