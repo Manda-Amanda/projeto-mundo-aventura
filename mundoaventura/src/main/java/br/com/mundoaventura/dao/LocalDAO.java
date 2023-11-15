@@ -11,7 +11,7 @@ import br.com.mundoaventura.model.Local;
 public class LocalDAO {
 
     public void createLocal(Local local) {
-        String SQL = "INSERT INTO LOCAL(NomeLocal, Endereco, Complemento, Cep, Cidade, Bairro) VALUES(?,?,?,?,?,?)";
+        String SQL = "INSERT INTO LOCAL(NomeLocal, Endereco, Complemento, Cep, Cidade, Bairro, Entrada, Matutino, Diurno, Norturno) VALUES(?,?,?,?,?,?,?,?,?)";
 
         try {
 
@@ -61,13 +61,14 @@ public class LocalDAO {
                 String cep = resultSet.getString("CEP");
                 String cidade = resultSet.getString("CIDADE");
                 String bairro = resultSet.getString("BAIRRO");
-                double entrada = resultSet.getDouble("entrada");
-                boolean matutino = resultSet.getBoolean("matutino");
-                boolean diurno = resultSet.getBoolean("diurno");
-                boolean noturno = resultSet.getBoolean("noturno");
+                double entrada = resultSet.getDouble("ENTRADA");
+                double meia = resultSet.getDouble("MEIA");
+                boolean matutino = resultSet.getBoolean("MATUTINO");
+                boolean diurno = resultSet.getBoolean("DIURNO");
+                boolean noturno = resultSet.getBoolean("NOTURNO");
 
 
-                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro, matutino, diurno, noturno, entrada);
+                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro,entrada, meia, matutino, diurno, noturno);
 
                 locals.add(local);
 
@@ -113,7 +114,7 @@ public class LocalDAO {
 
     public void updateLocal(Local local) {
 
-        String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO = ? WHERE ID = ?,?,?,?,?,?";
+        String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
 
         try {
 
