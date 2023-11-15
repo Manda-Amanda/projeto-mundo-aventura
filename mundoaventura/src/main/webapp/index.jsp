@@ -89,6 +89,27 @@
                 <label class="form-label ms-2" for="bairro">Bairro</label>
             </div>
 
+            <div class="mt-3 form-floating col-0">
+                <input class="form-control" type="checkbox" placeholder="Matutino" name="matutino" id="matutino" value="${param.matutino}">
+                <label class="form-label ms-2" for="matutino">Matutino</label>
+            </div>
+
+            <div class="mt-3 form-floating col-0">
+                <input class="form-control" type="checkbox" placeholder="Diurno" name="diurno" id="diurno" value="${param.diurno}">
+                <label class="form-label ms-2" for="diurno">Diurno</label>
+            </div>
+
+            <div class="mt-3 form-floating col-0">
+                <input class="form-control" type="checkbox" placeholder="Noturno" name="noturno" id="noturno" value="${param.noturno}">
+                <label class="form-label ms-2" for="noturno">Noturno</label>
+            </div>
+
+            <div class="mt-3 form-floating col-0">
+                <input class="form-control" type="number" required name="entrada" min="0" value="0" step="any" value="${param.entrada}">
+                <label class="form-label ms-2" for="entrada">Entrada</label>
+            </div>
+
+
             <div class="mt-3 col-0">
                 <label class="form-label ms-2" for="IMAGE">Imagens</label>
                 <input class="form-control" type="file" name="IMAGE" id="IMAGE" accept="image/png, image/jpeg" />

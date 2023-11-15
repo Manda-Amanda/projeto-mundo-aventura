@@ -67,7 +67,7 @@ public class LocalDAO {
                 boolean noturno = resultSet.getBoolean("noturno");
 
 
-                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro, entrada, matutino, diurno, noturno);
+                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro, matutino, diurno, noturno, entrada);
 
                 locals.add(local);
 
