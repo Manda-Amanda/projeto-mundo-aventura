@@ -63,14 +63,14 @@ public class LocalDAO {
                 String cidade = resultSet.getString("CIDADE");
                 String bairro = resultSet.getString("BAIRRO");
                 String imagem = resultSet.getString("imagem");
-                double entrada = resultSet.getDouble("ENTRADA");
+                /*double entrada = resultSet.getDouble("ENTRADA");
                 double meia = resultSet.getDouble("MEIA");
                 boolean matutino = resultSet.getBoolean("MATUTINO");
                 boolean diurno = resultSet.getBoolean("DIURNO");
                 boolean noturno = resultSet.getBoolean("NOTURNO");
+            */
 
-
-                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro,entrada, meia, matutino, diurno, noturno, imagem);
+                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro,/*entrada, meia, matutino, diurno, noturno,*/ imagem);
 
                 locals.add(local);
 
@@ -116,8 +116,10 @@ public class LocalDAO {
 
     public void updateLocal(Local local) {
 
-        String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
-
+        String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO = ? WHERE ID = ?,?,?,?,?,?,?";
+        /*
+            String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
+         */
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
