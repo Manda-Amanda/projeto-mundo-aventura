@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -98,7 +99,7 @@
             <a class="nav-link" href="sobre.jsp">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="guia.jsp">Guías</a>
+            <a class="nav-link" href="guia.jsp">Guias</a>
           </li>
         </ul>
         <!-- FIM MENU ITENS -->
@@ -126,12 +127,12 @@
 
 <main>
 
-  <!-- SECTION GUI MUNDO AVENTURA -->
+  <!-- SECTION GUIA MUNDO AVENTURA -->
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
 
-        <h1 class="fw-light">Guía Mundo Aventura</h1>
+        <h1 class="fw-light">Guia Mundo Aventura</h1>
 
         <p class="lead text-body-secondary">
           Aqui, você encontrará uma variedade de informações emocionantes
@@ -156,429 +157,28 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
+        <!-- DIV ALBUM CONTAINER -->
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <c:forEach var="local" items="${locals}">
+                        <section class="col">
+                            <div class="card shadow-sm" data-aos="zoom-in-right">
+                                <img src="<c:out value="${local.imageUrl}" />" width="100%" height="225">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <c:out value="${local.description}" />
+                                    </p>
+                                    <div class="btn-group">
+                                        <p><a href="#" class="btn btn-dark">Ver mais</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </c:forEach>
                 </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
             </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-        <!-- SECTION COM IMAGEN É INFO DO LUGAR -->
-        <section class="col">
-
-          <div class="card shadow-sm" data-aos="zoom-in-right">
-
-            <img src="..." width="100%" height="225"> <!-- COLOCAR LINK DE IMAGEM NO ATRIBUTO SRC -->
-
-            <!-- CARD -->
-            <div class="card-body">
-
-              <!-- DESCRIÇÃO -->
-              <p class="card-text">
-                Colocar pequena descrição do lugar aqui
-              </p>
-
-              <div>
-
-                <!-- BUTTON VER MAIS -->
-                <div class="btn-group">
-                  <p><a href="#" class="btn btn-dark">Ver mais</a></p>
-                </div>
-                <!-- FIM BUTTON VER MAIS -->
-
-              </div>
-
-            </div>
-            <!-- FIM DIV CARD -->
-
-
-          </div>
-
-        </section>
-        <!-- FIM SECTION INFO E IMAGEN -->
-
-      </div>
-
-    </div>
-
-  </div>
+        </div>
 
 </main>
 

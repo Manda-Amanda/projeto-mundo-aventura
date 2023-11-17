@@ -60,7 +60,7 @@
             <input type="hidden" id="id" name="id" value="${param.id}">
 
             <div class="mt-3 form-floating col-0">
-                <input class="form-control" placeholder="Nome do Local" type="text" name="nome-local" id="nome-local" value="${param.local}">
+                <input class="form-control" placeholder="Nome do Local" type="text" name="nome-local" id="nome-local" value="${param.nomeLocal}">
                 <label class="form-label ms-2" for="nome-local">Nome do Local</label>
             </div>
 
@@ -91,10 +91,11 @@
 
             <div class="mt-3 col-0">
                 <label class="form-label ms-2" for="IMAGE">Imagens</label>
-                <input class="form-control" type="text" name="IMAGE" id="IMAGE" value = "${param.imagem}" />
+                <input class="form-control" type="text" name="imagem" id="imagem" value = "${param.imagem}" />
             </div>
 
             <div class="mt-3 col-0 form-floating">
+
                 <textarea class="form-control"  placeholder="Descricao" id="DESCRICAO" name="DESCRICAO" rows="4" cols="50"></textarea>
                 <label class="form-label ms-2" for="DESCRICAO">Descricao</label>
             </div>

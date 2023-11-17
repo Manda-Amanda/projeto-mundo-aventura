@@ -106,6 +106,7 @@
                         <th>Cidade</th>
                         <th>Bairro</th>
                         <th>Comentario</th>
+                        <th>imagem</th>
                     </tr>
 
                     <c:forEach var="local" items="${locals}">
@@ -117,22 +118,30 @@
                             <td>${local.cep}</td>
                             <td>${local.cidade}</td>
                             <td>${local.bairro}</td>
+                            <td>${local.imagem}</td>
+
+
+
 
                             <td>
                                 <c:if test="${sessionScope.loggedUser != null}">
 
-                                    <!--------- FORMULARIO --------->
-                                    <form action="/delete-local" method="post">
 
-                                        <input type="hidden" ID="ID" name="ID" value="${local.ID}">
+                                    <!--------- FORMULARIO BUTTONS UPDATE E DELETE --------->
+                                    <form action="/delete" method="post">
+
+                                        <input type="hidden" id="id" name="id" value="${local.id}">
+
 
                                         <button class="btn btn-danger" type="submit">Delete</button>
 
                                         <a class="btn btn-secondary"
-                                           href="index.jsp?ID=${local.ID}&nomeLocal=${local.nomeLocal}">Update</a>
+                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}">Update
+                                        </a>
+
+
 
                                     </form>
-
                                 </c:if>
                             </td>
 

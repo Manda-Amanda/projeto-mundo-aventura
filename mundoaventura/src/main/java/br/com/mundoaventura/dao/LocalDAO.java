@@ -11,7 +11,7 @@ import br.com.mundoaventura.model.Local;
 public class LocalDAO {
 
     public void createLocal(Local local) {
-        String SQL = "INSERT INTO LOCAL(NomeLocal, Endereco, Complemento, Cep, Cidade, Bairro, Entrada, Matutino, Diurno, Norturno, imagem) VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO LOCAL(NOMELOCAL, ENDERECO, COMPLEMENTO, CEP, CIDADE, BAIRRO, IMAGEM) VALUES(?,?,?,?,?,?,?)";
 
         try {
 
@@ -116,7 +116,7 @@ public class LocalDAO {
 
     public void updateLocal(Local local) {
 
-        String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO = ? WHERE ID = ?,?,?,?,?,?,?";
+        String SQL = "UPDATE LOCAL SET NOMELOCAL,SET ENDERECO,SET COMPLEMENTO,SET CEP,SET CIDADE,SET BAIRRO = ? WHERE ID = ?,?,?,?,?,?,?";
         /*
             String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
          */
@@ -128,7 +128,7 @@ public class LocalDAO {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, local.getID());
+            preparedStatement.setString(1, local.getId());
             preparedStatement.setString(2, local.getNomeLocal());
             preparedStatement.setString(3, local.getEndereco());
             preparedStatement.setString(4, local.getComplemento());

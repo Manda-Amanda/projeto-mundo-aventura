@@ -43,7 +43,7 @@ public class Local {
     public String getCep() {return cep;}
     public String getCidade() {return cidade;}
     public String getBairro() {return bairro;}
-    public String getID() {return id;}
+    public String getId() {return id;}
    /* public double getEntrada(){return entrada;}
     public double getMeia(){return meia;}
     public boolean getMatutino(){return matutino;}
