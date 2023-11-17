@@ -12,6 +12,14 @@
 
 - Atualizações em Tempo Real: O site pode ser atualizado regularmente com eventos e informações em tempo real.
 
+##Problemas:
+1. Botão Delete não deleta;
+2. Update não exibe a DESCRICAO:
+2.1. Precisa adicionar no banco de dados,
+2.2. Precisa vincular ao banco,
+2.3. Fazer exibir quando tiver uma descricao já gravada.
+3. Exibir o caminho da imagem (Text) no dashboard.
+
 <<<<<<< HEAD
 ![Git logo](projeto/Diagrama/diagrama-1.png)
 ![Git logo](projeto/Diagrama/diagrama-2.png)
