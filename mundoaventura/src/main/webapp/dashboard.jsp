@@ -105,7 +105,7 @@
                         <th>Cep</th>
                         <th>Cidade</th>
                         <th>Bairro</th>
-                        <th>Comentario</th>
+                        <th>Descricao</th>
                         <th>imagem</th>
                     </tr>
 
@@ -118,6 +118,7 @@
                             <td>${local.cep}</td>
                             <td>${local.cidade}</td>
                             <td>${local.bairro}</td>
+                            <td>${local.Descricao}</td>
                             <td>${local.imagem}</td>
 
 
@@ -136,7 +137,7 @@
                                         <button class="btn btn-danger" type="submit">Delete</button>
 
                                         <a class="btn btn-secondary"
-                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}">Update
+                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}&Descricao=${local.Descricao}">Update
                                         </a>
 
 

@@ -11,7 +11,7 @@ import br.com.mundoaventura.model.Local;
 public class LocalDAO {
 
     public void createLocal(Local local) {
-        String SQL = "INSERT INTO LOCAL(NOMELOCAL, ENDERECO, COMPLEMENTO, CEP, CIDADE, BAIRRO, IMAGEM) VALUES(?,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO LOCAL(NOMELOCAL, ENDERECO, COMPLEMENTO, CEP, CIDADE, BAIRRO,IMAGEM, DESCRICAO) VALUES(?,?,?,?,?,?,?,?)";
 
         try {
 
@@ -27,6 +27,7 @@ public class LocalDAO {
             preparedStatement.setString(5, local.getCidade());
             preparedStatement.setString(6, local.getBairro());
             preparedStatement.setString(7, local.getImagem());
+            preparedStatement.setString(8, local.getDescricao());
 
             preparedStatement.execute();
             System.out.println("sucesso insert local");
@@ -63,6 +64,8 @@ public class LocalDAO {
                 String cidade = resultSet.getString("CIDADE");
                 String bairro = resultSet.getString("BAIRRO");
                 String imagem = resultSet.getString("imagem");
+                String Descricao = resultSet.getString("Descricao");
+
                 /*double entrada = resultSet.getDouble("ENTRADA");
                 double meia = resultSet.getDouble("MEIA");
                 boolean matutino = resultSet.getBoolean("MATUTINO");
@@ -70,7 +73,7 @@ public class LocalDAO {
                 boolean noturno = resultSet.getBoolean("NOTURNO");
             */
 
-                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro,/*entrada, meia, matutino, diurno, noturno,*/ imagem);
+                Local local = new Local(localID, nomeLocal, endereco, complemento, cep, cidade, bairro,imagem,Descricao);
 
                 locals.add(local);
 
@@ -116,7 +119,7 @@ public class LocalDAO {
 
     public void updateLocal(Local local) {
 
-        String SQL = "UPDATE LOCAL SET NOMELOCAL,SET ENDERECO,SET COMPLEMENTO,SET CEP,SET CIDADE,SET BAIRRO = ? WHERE ID = ?,?,?,?,?,?,?";
+        String SQL = "UPDATE LOCAL SET NOMELOCAL,SET ENDERECO,SET COMPLEMENTO,SET CEP,SET CIDADE,SET BAIRRO, SET DESCRICAO = ? WHERE ID = ?,?,?,?,?,?,?,?";
         /*
             String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
          */
@@ -135,6 +138,7 @@ public class LocalDAO {
             preparedStatement.setString(5, local.getCep());
             preparedStatement.setString(6, local.getCidade());
             preparedStatement.setString(7, local.getBairro());
+            preparedStatement.setString(8, local.getDescricao());
             preparedStatement.execute();
 
             System.out.println("sucesso no update local");
