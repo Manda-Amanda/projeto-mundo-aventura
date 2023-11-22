@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
+
 <html lang="pt-br">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
@@ -118,7 +118,7 @@
                             <td>${local.cep}</td>
                             <td>${local.cidade}</td>
                             <td>${local.bairro}</td>
-                            <td>${local.Descricao}</td>
+                            <td>${local.descricao}</td>
                             <td>${local.imagem}</td>
 
 
@@ -134,10 +134,10 @@
                                         <input type="hidden" id="id" name="id" value="${local.id}">
 
 
-                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                        <button class="btn btn-danger" type="submit" >Delete</button>
 
                                         <a class="btn btn-secondary"
-                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}&Descricao=${local.Descricao}">Update
+                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}&descricao=${local.descricao}">Update
                                         </a>
 
 

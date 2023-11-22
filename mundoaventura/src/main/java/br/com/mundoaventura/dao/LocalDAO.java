@@ -139,6 +139,7 @@ public class LocalDAO {
             preparedStatement.setString(6, local.getCidade());
             preparedStatement.setString(7, local.getBairro());
             preparedStatement.setString(8, local.getDescricao());
+            preparedStatement.setString(8, local.getImagem());
             preparedStatement.execute();
 
             System.out.println("sucesso no update local");

@@ -97,7 +97,6 @@
             <div class="mt-3 col-0 form-floating">
 
                 <input class="form-control" type="text" placeholder="Descricao" name="Descricao" id="Descricao" value="${param.Descricao}">
-                <textarea class="form-control"  placeholder="Descricao" id="Descricao" name="Descricao" rows="4" cols="50"></textarea>
                 <label class="form-label ms-2" for="Descricao">Descricao</label>
             </div>
 
