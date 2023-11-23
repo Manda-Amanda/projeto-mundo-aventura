@@ -24,7 +24,7 @@ public class CreateLocalServlet extends HttpServlet {
         String cidade = request.getParameter("cidade");
         String bairro = request.getParameter("bairro");
         String imagem = request.getParameter("imagem");
-        String Descricao = request.getParameter("Descricao");
+        String Descricao = request.getParameter("descricao");
 
 
 

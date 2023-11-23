@@ -14,7 +14,7 @@ public class DeleteLocalServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        String localID = req.getParameter("ID");
+        String localID = req.getParameter("id");
 
         new LocalDAO().deleteLocalByNome(localID);
 

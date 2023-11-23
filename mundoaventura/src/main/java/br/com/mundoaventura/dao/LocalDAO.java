@@ -119,7 +119,7 @@ public class LocalDAO {
 
     public void updateLocal(Local local) {
 
-        String SQL = "UPDATE LOCAL SET NOMELOCAL,SET ENDERECO,SET COMPLEMENTO,SET CEP,SET CIDADE,SET BAIRRO, SET DESCRICAO = ? WHERE ID = ?,?,?,?,?,?,?,?";
+        String SQL = "UPDATE LOCAL SET NOMELOCAL = ?, ENDERECO = ?, COMPLEMENTO = ?, CEP = ?, CIDADE = ?, BAIRRO = ?, DESCRICAO = ? WHERE ID = ?";
         /*
             String SQL = "UPDATE LOCAL SET NOMELOCAL,ENDERECO,COMPLEMENTO,CEP,CIDADE,BAIRRO,ENTRADA,MATUTINO,DIURNO,NOTURNO = ? WHERE ID = ?,?,?,?,?,?,?,?,?,?";
          */
@@ -131,14 +131,14 @@ public class LocalDAO {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, local.getId());
-            preparedStatement.setString(2, local.getNomeLocal());
-            preparedStatement.setString(3, local.getEndereco());
-            preparedStatement.setString(4, local.getComplemento());
-            preparedStatement.setString(5, local.getCep());
-            preparedStatement.setString(6, local.getCidade());
-            preparedStatement.setString(7, local.getBairro());
-            preparedStatement.setString(8, local.getDescricao());
+            preparedStatement.setString(1, local.getNomeLocal());
+            preparedStatement.setString(2, local.getEndereco());
+            preparedStatement.setString(3, local.getComplemento());
+            preparedStatement.setString(4, local.getCep());
+            preparedStatement.setString(5, local.getCidade());
+            preparedStatement.setString(6, local.getBairro());
+            preparedStatement.setString(7, local.getDescricao());
+            preparedStatement.setInt(8, Integer.parseInt(local.getId()));
             preparedStatement.execute();
 
             System.out.println("sucesso no update local");

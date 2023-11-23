@@ -70,7 +70,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" aria-current="page" href="dashboard.jsp"><span data-feather="home" class="align-text-bottom"></span> Home</a>
+                        <a class="nav-link" aria-current="page" href="/find-all-locals"><span data-feather="home" class="align-text-bottom"></span> Home</a>
 
                     </li>
 
@@ -107,6 +107,7 @@
                         <th>Bairro</th>
                         <th>Descricao</th>
                         <th>imagem</th>
+                        <th>Acoes</th>
                     </tr>
 
                     <c:forEach var="local" items="${locals}">
@@ -118,7 +119,7 @@
                             <td>${local.cep}</td>
                             <td>${local.cidade}</td>
                             <td>${local.bairro}</td>
-                            <td>${local.Descricao}</td>
+                            <td>${local.descricao}</td>
                             <td>${local.imagem}</td>
 
 
@@ -137,7 +138,7 @@
                                         <button class="btn btn-danger" type="submit">Delete</button>
 
                                         <a class="btn btn-secondary"
-                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}&Descricao=${local.Descricao}">Update
+                                           href="index.jsp?id=${local.id}&nomeLocal=${local.nomeLocal}&endereco=${local.endereco}&complemento=${local.complemento}&cep=${local.cep}&cidade=${local.cidade}&bairro=${local.bairro}&imagem=${local.imagem}&descricao=${local.descricao}">Update
                                         </a>
 
 

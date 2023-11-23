@@ -2,7 +2,7 @@ package br.com.mundoaventura.model;
 
 public class Local {
 
-    private final String Descricao;
+    private final String descricao;
     private final String bairro;
     private final String cidade;
     private final String cep;
@@ -17,7 +17,7 @@ public class Local {
     private final boolean diurno;
     private final boolean noturno;*/
 
-    public Local(String id, String nomelocal, String endereco, String complemento, String cep, String cidade, String bairro,String imagem, String Descricao ) {
+    public Local(String id, String nomelocal, String endereco, String complemento, String cep, String cidade, String bairro,String imagem, String descricao ) {
         this.id = id;
         this.nomelocal = nomelocal;
         this.endereco = endereco;
@@ -26,7 +26,7 @@ public class Local {
         this.cidade = cidade;
         this.bairro = bairro;
         this.imagem=imagem;
-        this.Descricao=Descricao;
+        this.descricao =descricao;
 
 
 
@@ -40,6 +40,6 @@ public class Local {
     public String getBairro() {return bairro;}
     public String getId() {return id;}
     public String getImagem() {return imagem;}
-    public String getDescricao() {return Descricao;}
+    public String getDescricao() {return descricao;}
 
 }

@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 
             req.setAttribute("messege", messege);
 
-            req.getRequestDispatcher("Login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
 
         }
     }
