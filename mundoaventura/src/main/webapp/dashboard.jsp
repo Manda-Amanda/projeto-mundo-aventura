@@ -131,7 +131,7 @@
                                     <!--------- FORMULARIO BUTTONS UPDATE E DELETE --------->
                                     <form action="/delete" method="post">
 
-                                        <input type="hidden" id="id" name="id" value="${local.id}">
+                                        <input type="hidden" id="ID" name="id" value="${local.id}">
 
 
                                         <button class="btn btn-danger" type="submit" >Delete</button>
